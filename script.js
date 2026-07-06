@@ -13,6 +13,7 @@ cityInput.addEventListener("keydown", (e) => {
 searchButton.addEventListener("click",fetchWeatherData);
 async function fetchWeatherData() {
     const cityName = cityInput.value;
+    cityInput.value = "";
     const apiKey = "855cf29df13fcb4afe4b05974c3e65ca";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
