@@ -4,6 +4,11 @@ const cityNameElement = document.getElementById("city-name");
 const temperatureElement = document.getElementById("temperature");
 const humidityElement = document.getElementById("humidity");
 const windSpeedElement = document.getElementById("wind-speed");
+cityInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        fetchWeatherData();
+    }
+});
 
 searchButton.addEventListener("click",fetchWeatherData);
 async function fetchWeatherData() {
